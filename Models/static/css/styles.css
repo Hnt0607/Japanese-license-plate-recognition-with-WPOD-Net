@@ -1,0 +1,52 @@
+/* styles.css */
+
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    padding-bottom: 20px;
+}
+
+/* Apply styling to the whole body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Style for the header form */
+.form_header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+/* Style for the result section */
+.result {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Style for each result element */
+.result > div {
+    text-align: center;
+}
+
+/* Responsive styling for images */
+.result img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text_string{
+    font-family: 'Times New Roman';
+    font-size:50px;
+}
+
+.vehicle{
+    width: 250px;
+}

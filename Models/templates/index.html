@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <title>License Plate Recognition</title>
+
+</head>
+<body>
+    <div class="form_header">
+        <h1>License Plate Recognition</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Upload and Process">
+        </form>
+    </div>
+    
+    {% if vehicle is not none %}
+    <div class="result">
+        <div>
+            <h2>Detected Vehicle:</h2>
+            <img src="{{ vehicle }}" alt="Detected Vehicle" class="vehicle" >
+        </div>
+    
+        <div>
+            <h2>License Plate with Bounding Boxes:</h2>
+            <img src="{{ drawn_image }}" alt="License Plate with Bounding Boxes" style="max-width: 100%">
+        </div>
+        
+        <div>
+            <h2>Recognized License Plate:</h2>
+            <p class="text_string">{{ final_string }}</p>
+        </div>
+    </div>
+    {% endif %}
+
+    
+    
+
+</body>
+</html>
